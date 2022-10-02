@@ -1,0 +1,174 @@
+.navbar-header {
+  max-width: 1170px;
+  margin: auto;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.header {
+  padding: 0.7rem 0;
+  line-height: 1.5;
+  outline: none;
+  background-color: #f0e3d7;
+  transition: all 0.4s linear;
+  box-shadow: 0px 6px 2px rgba(0, 0, 0, 0.3);
+}
+
+.header .logo,
+.header .navbar {
+  padding: 0 0.7rem;
+}
+.navbar {
+  font-family: 'Alegreya', serif;
+}
+
+.header .logo h1 {
+  font-family: 'Alegreya Sans', sans-serif;
+  font-size: 2.2rem;
+  color: #fff;
+  font-weight: 900;
+  letter-spacing: 2px;
+}
+.navbar ul li {
+  display: inline-block;
+  margin-left: 2rem;
+}
+
+.navbar ul li a {
+  display: block;
+  color: #333;
+  font-size: 1.3rem;
+  letter-spacing: 2px;
+  padding: 10px 0;
+  transition: all 0.4s linear;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.navbar ul li a:hover {
+  color: #ef7a2e;
+  transform: translateY(-2px);
+  animation: bounce 1s infinite;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.title-first-name {
+  color: #ef7a2e;
+}
+.title-second-name {
+  color: #333;
+}
+
+.nav-toggler {
+  width: 40px;
+  height: 40px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  margin-right: 14px;
+  display: none;
+}
+
+.nav-toggler span {
+  height: 2px;
+  width: 20px;
+  background-color: #333;
+  margin: auto;
+  display: block;
+  position: relative;
+  transition: all 0.4s ease-in-out;
+}
+
+.nav-toggler.active span {
+  background: none;
+}
+
+.nav-toggler span::before,
+.nav-toggler span::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #333;
+  transition: all 0.4s ease-in-out;
+}
+
+.nav-toggler span::before {
+  transform: translateY(-6px);
+}
+
+.nav-toggler.active span::before {
+  transform: rotate(45deg);
+}
+
+.nav-toggler.active span::after {
+  transform: rotate(135deg);
+}
+.nav-toggler span::after {
+  transform: translateY(6px);
+}
+
+.sign-in-btn {
+  padding: 0.5rem 1.5rem;
+}
+
+/* Fixed Navbar */
+.header.fixed {
+  transition: all 0.4s linear;
+  position: sticky;
+  z-index: 1000;
+  top: 0;
+  width: 100%;
+}
+
+.header.fixed .logo {
+  z-index: 1;
+}
+
+@media (max-width: 991px) {
+  .nav-toggler {
+    display: block;
+  }
+  .header .navbar {
+    width: 100%;
+    padding: 0;
+    max-height: 0;
+    visibility: hidden;
+    overflow: hidden;
+    transition: all 0.5s ease;
+  }
+
+  .header .navbar.open {
+    visibility: visible;
+  }
+
+  .header nav ul {
+    padding: 1rem 0.9rem;
+    margin-top: 0.9rem;
+    border-top: 2px solid grey;
+  }
+  .header .navbar ul li {
+    display: block;
+    margin: 0;
+    text-align: center;
+  }
+}

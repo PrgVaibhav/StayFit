@@ -1,0 +1,84 @@
+.footer-section {
+  background-color: #333333;
+  color: white;
+  padding: 3rem;
+}
+
+.footer-section a {
+  color: #f0e3d7;
+  font-size: 1.2rem;
+  transition: all 0.3s linear;
+}
+
+.footer-section a:hover {
+  color: #ef7a2e;
+}
+
+.footer .logo h5 {
+  font-size: 1.1rem;
+  letter-spacing: 2px;
+}
+
+.footer .logo span {
+  color: #ef7a2e;
+}
+.footer {
+  display: flex;
+  justify-content: space-between;
+  /* align-items: center; */
+  font-family: 'Alegreya Sans', sans-serif;
+}
+
+.footer ul > li {
+  margin-top: 0.7rem;
+  margin-bottom: 0.7rem;
+}
+
+.footer .span-headers {
+  color: rgb(134, 131, 131);
+  font-size: 1.4rem;
+  text-transform: uppercase;
+}
+
+.menu {
+  display: flex;
+  gap: 5rem;
+}
+
+.credits {
+  margin-top: 5rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.credits-social {
+  font-size: 1.5rem;
+  display: flex;
+  gap: 2rem;
+}
+
+.credits-section span {
+  font-size: 1.3rem;
+}
+
+.github {
+  text-decoration: #ef7a2e wavy underline;
+}
+
+@media (max-width: 950px) {
+  .footer {
+    flex-direction: column;
+    gap: 4rem;
+    /* align-items: flex-start; */
+  }
+
+  .menu {
+    flex-direction: column;
+    gap: 3rem;
+  }
+  .credits {
+    flex-direction: column;
+    gap: 2rem;
+  }
+}

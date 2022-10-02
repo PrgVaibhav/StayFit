@@ -1,0 +1,32 @@
+.btn {
+  background-color: #ef7a2e;
+  color: #fff;
+  /* padding: 0.5rem 1.5rem; */
+  border-radius: 4px;
+  font-size: 1.2rem;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.4s linear;
+  font-family: 'Alegreya', serif;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.btn:hover {
+  animation: bounce 1s infinite;
+  background-color: #333;
+  color: #ef7a2e;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
